@@ -65,10 +65,6 @@ spec:
           title: Namespace
           type: string
           description: The namespace for deploying resources
-        port:
-          title: Port
-          type: number
-          description: The port exposed for the application
 
   steps:
     - id: fetchRepo
@@ -99,7 +95,6 @@ spec:
           imageUrl: ${{ parameters.imageUrl }}
           imageRepository: ${{ parameters.imageRepository }}
           namespace: ${{ parameters.namespace }}
-          port: ${{ parameters.port }}
           sourceControl: github.com
 
     - id: publishPR
